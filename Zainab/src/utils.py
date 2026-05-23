@@ -2,9 +2,6 @@
 from __future__ import annotations
 
 import numpy as np
-import matplotlib.pyplot as plt
-
-import config
 
 
 def rmse(y_true, y_pred) -> float:
@@ -23,6 +20,8 @@ def mape(y_true, y_pred) -> float:
 
 
 def plot_loss(history: dict, out_path=None):
+    import matplotlib.pyplot as plt
+
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.plot(history["loss"], label="train")
     if "val_loss" in history:
@@ -38,6 +37,8 @@ def plot_loss(history: dict, out_path=None):
 
 
 def plot_predictions(dates, actual, predicted, ticker: str, out_path=None):
+    import matplotlib.pyplot as plt
+
     fig, ax = plt.subplots(figsize=(11, 5))
     ax.plot(dates, actual, label="Actual", linewidth=1.5)
     ax.plot(dates, predicted, label="Predicted", linewidth=1.5, alpha=0.85)
@@ -53,6 +54,8 @@ def plot_predictions(dates, actual, predicted, ticker: str, out_path=None):
 
 
 def plot_forecast(history_dates, history_prices, future_dates, future_prices, ticker, out_path=None):
+    import matplotlib.pyplot as plt
+
     fig, ax = plt.subplots(figsize=(11, 5))
     ax.plot(history_dates, history_prices, label="Historical", linewidth=1.2)
     ax.plot(future_dates, future_prices, label="Forecast", linewidth=2.0, color="crimson")
