@@ -1,4 +1,5 @@
-# Runtime deps for Streamlit Community Cloud (streamlit_app.py)
+# Local pip install. On Streamlit Cloud, environment.yml is used instead (Python 3.12).
+# If you deploy with requirements.txt only, pick Python 3.12 in Advanced settings (not 3.14).
 tensorflow>=2.15,<2.22
 yfinance>=0.2.40
 pandas>=2.0,<3.1
