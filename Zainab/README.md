@@ -19,7 +19,8 @@ University deep learning project — predicts stock closing price trend using an
 ```bash
 python -m venv .venv
 source .venv/bin/activate         # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt   # training, plots, notebook
+# Cloud / demo only: pip install -r requirements.txt
 ```
 
 ## Usage
@@ -86,3 +87,13 @@ Optimizer: Adam, Loss: MSE, Window: 60 days
 ## Metrics
 
 After training, `python -m src.evaluate` prints RMSE / MAE / MAPE on the test set and writes plots to `artifacts/plots/`.
+
+## Deploy to Streamlit Community Cloud
+
+1. Push this repo to GitHub (include `artifacts/model.keras` and `artifacts/scaler.pkl`).
+2. Go to [share.streamlit.io](https://share.streamlit.io), sign in with GitHub, and **New app**.
+3. Set **Repository** to your fork, **Branch** `main`, **Main file path** `streamlit_app.py`.
+4. Python version: **3.12** (or add `.python-version` — already in repo).
+5. Deploy. The app loads the committed model; live prices come from yfinance.
+
+**Repo root must contain:** `streamlit_app.py`, `requirements.txt`, `config.py`, `src/`, and `artifacts/model.keras` + `artifacts/scaler.pkl`.

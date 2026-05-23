@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+__MACOSX/
+Thumbs.db
+
+# Secrets & local config
+.env
+.env.*
+.streamlit/secrets.toml
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Optional: regenerate locally (yfinance caches on first run)
+# artifacts/data/*.csv
+
+# Training outputs you may regenerate (keep model + scaler for Cloud deploy)
+# artifacts/plots/
+# artifacts/*.json
+# artifacts/forecast_30d.csv
