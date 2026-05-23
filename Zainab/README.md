@@ -92,8 +92,8 @@ After training, `python -m src.evaluate` prints RMSE / MAE / MAPE on the test se
 
 1. Push this repo to GitHub (include `artifacts/model.keras` and `artifacts/scaler.pkl`).
 2. Go to [share.streamlit.io](https://share.streamlit.io), sign in with GitHub, and **New app**.
-3. Set **Repository** to your fork, **Branch** `main`, **Main file path** `streamlit_app.py`.
-4. Python version: **3.12** (or add `.python-version` — already in repo).
+3. Set **Repository** to `Mariam-Rehan/Zainab`, **Branch** `main`, **Main file path** `Zainab/streamlit_app.py`.
+4. Python version: **3.12** (`.python-version` is in the `Zainab/` folder).
 5. Deploy. The app loads the committed model; live prices come from yfinance.
 
-**Repo root must contain:** `streamlit_app.py`, `requirements.txt`, `config.py`, `src/`, and `artifacts/model.keras` + `artifacts/scaler.pkl`.
+**The `Zainab/` app folder must contain:** `streamlit_app.py`, `requirements.txt`, `config.py`, `src/`, and `artifacts/model.keras` + `artifacts/scaler.pkl`.
