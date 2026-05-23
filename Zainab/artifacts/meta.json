@@ -1,0 +1,10 @@
+{
+  "ticker": "AAPL",
+  "start": "2014-01-01",
+  "end": null,
+  "window": 60,
+  "epochs_requested": 25,
+  "epochs_run": 18,
+  "split_idx": 2492,
+  "rows": 3115
+}
